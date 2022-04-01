@@ -1,3 +1,36 @@
+function cuentaIgual(button) {
+  console.log(button.innerText);
+  if (signo === "+") {
+    resultado = a + b;
+    // console.log("resultado " + resultado);
+    rowtop.textContent = resultado;
+    a = resultado;
+    b = 0;
+    signo = 0;
+  } else if (signo === "-") {
+    resultado = a - b;
+    // console.log("resultado " + resultado);
+    rowtop.textContent = resultado;
+    a = resultado;
+    b = 0;
+    signo = 0;
+  } else if (signo === "/") {
+    resultado = a / b;
+    //  console.log("resultado " + resultado);
+    rowtop.textContent = resultado;
+    a = resultado;
+    b = 0;
+    signo = 0;
+  } else if (signo === "*") {
+    resultado = a * b;
+    //   console.log("resultado " + resultado);
+    rowtop.textContent = resultado;
+    a = resultado;
+    b = 0;
+    signo = 0;
+  }
+}
+
 const buttons = document.querySelectorAll("button");
 const rowtop = document.getElementById("row-top");
 let a = 0,
@@ -108,36 +141,7 @@ buttons.forEach((button) => {
     }
 
     if (button.innerText === "=") {
-      //   console.log(button.innerText);
-      if (signo === "+") {
-        resultado = a + b;
-        // console.log("resultado " + resultado);
-        rowtop.textContent = resultado;
-        a = resultado;
-        b = 0;
-        signo = 0;
-      } else if (signo === "-") {
-        resultado = a - b;
-        // console.log("resultado " + resultado);
-        rowtop.textContent = resultado;
-        a = resultado;
-        b = 0;
-        signo = 0;
-      } else if (signo === "/") {
-        resultado = a / b;
-        //  console.log("resultado " + resultado);
-        rowtop.textContent = resultado;
-        a = resultado;
-        b = 0;
-        signo = 0;
-      } else if (signo === "*") {
-        resultado = a * b;
-        //   console.log("resultado " + resultado);
-        rowtop.textContent = resultado;
-        a = resultado;
-        b = 0;
-        signo = 0;
-      }
+      cuentaIgual(button);
     }
   });
 });
